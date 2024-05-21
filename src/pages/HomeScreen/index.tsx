@@ -14,7 +14,6 @@ export function HomeScreen({ navigation }) {
   return (
     <View style = {styles.container}>
       <TouchableOpacity style={styles.button} onPress={linkExternal}>
-        <Image source={'./'}
         <Text style={styles.buttonText}>Visite nosso Site</Text>
         <Foundation name="web" size={34} color="#fff" />
       </TouchableOpacity>
