@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet,Image,Text, TouchableOpacity, Linking, ImageBackground } from 'react-native';
+import { View, StyleSheet,Image,Text, TouchableOpacity, Linking, ImageBackground, StatusBar } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { Foundation } from '@expo/vector-icons';
@@ -35,8 +35,9 @@ const styles = StyleSheet.create({
     flexDirection:'column',
     //justifyContent:'center',
    // alignItems:'center',
-   // backgroundColor:'#f3f3ff',
+    backgroundColor:'#f3f3ff',
   //  paddingHorizontal:18
+    //marginVertical:2
   },
   title:{
     fontSize:34,
