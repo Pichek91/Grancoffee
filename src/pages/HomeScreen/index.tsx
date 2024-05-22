@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, StyleSheet,Image,Text, TouchableOpacity, Linking } from 'react-native';
+import { View, StyleSheet,Image,Text, TouchableOpacity, Linking, ImageBackground } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { Foundation } from '@expo/vector-icons';
@@ -13,21 +13,30 @@ function linkExternal (){
 export function HomeScreen({ navigation }) {
   return (
     <View style = {styles.container}>
-      <TouchableOpacity style={styles.button} onPress={linkExternal}>
-        <Text style={styles.buttonText}>Visite nosso Site</Text>
-        <Foundation name="web" size={34} color="#fff" />
-      </TouchableOpacity>
+         <ImageBackground source={require('../../Image/fundo3.png')}
+          style = {styles.logo} 
+         >
+            <TouchableOpacity style={styles.button} onPress={linkExternal}>
+                <Text style={styles.buttonText}>Visite nosso Site</Text>
+                <Foundation name="web" size={34} color="#fff" />
+            </TouchableOpacity>
+         </ImageBackground>
+
+
     </View>
+
   );
+
 }
 
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    justifyContent:'center',
-    alignItems:'center',
-    backgroundColor:'#f0f4ff',
-    paddingHorizontal:18
+    flexDirection:'column',
+    //justifyContent:'center',
+   // alignItems:'center',
+   // backgroundColor:'#f3f3ff',
+  //  paddingHorizontal:18
   },
   title:{
     fontSize:34,
@@ -52,6 +61,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#45d800',
     borderRadius: 8,
     marginBottom: 8,
+    marginTop:'130%',
     justifyContent:'center',
     alignItems: 'center',
   },
@@ -66,6 +76,19 @@ const styles = StyleSheet.create({
     alignSelf:'flex-start',
     color:'#ff375b',
     marginBottom: 8, 
-  }
+  },
+  area:{
+    marginTop: 14,
+    marginBottom: 14,
+    width:"80%",
+    backgroundColor:"blue",
+    borderRadius: 8,
+    padding: 8,
+  },
+  logo:{
+    flex:1,
+    //justifyContent:'flex-end',
+    alignItems:'center'
+   }
 
 })

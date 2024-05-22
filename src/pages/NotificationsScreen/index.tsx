@@ -11,3 +11,4 @@ export function NotificationsScreen({ navigation }) {
       </View>
     );
   }
+  

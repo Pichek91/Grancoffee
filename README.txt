@@ -38,4 +38,6 @@ Por fim, esta pronto para fazer novas alterações, não esqueça de sempre salv
 
     npm install @react-navigation/drawer
     npx expo install react-native-gesture-handler react-native-reanimated
-    
+    npm install react-hook-form    
+    npm install @hookform/resolvers
+    npm install yup
